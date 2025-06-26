@@ -1,6 +1,6 @@
 import React from 'react'
-import Login from '../features/auth/components/login'
-const Login = () => {
+import Login from '../features/auth/components/Login'
+const LoginPage = () => {
   return (
     <div>
       <Login></Login>
@@ -8,4 +8,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default LoginPage

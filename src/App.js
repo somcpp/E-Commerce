@@ -1,8 +1,10 @@
 import './App.css';
+import CartPage from './pages/cartPage';
 import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
-
+import Checkout from './pages/Checkout'
+import ProductDetailPage from './pages/ProductDetailsPage'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -26,6 +28,14 @@ const router = createBrowserRouter([
   { // only for testing - then page will be added
     path: '/cart',
     element: <CartPage></CartPage>,
+  },
+  { 
+    path: '/checkout',
+    element: <Checkout></Checkout>,
+  },
+  { 
+    path: '/product-detail',
+    element: <ProductDetailPage></ProductDetailPage>,
   },
 ]);
 
