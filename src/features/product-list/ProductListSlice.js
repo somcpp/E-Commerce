@@ -1,8 +1,10 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { fetchAllProducts } from './ProductListAPI';
+import { fetchAllProducts,fetchBrands,fetchCategories } from './ProductListAPI';
 import { fetchProductByFilters } from './ProductListAPI';
 const initialState = {
   products: [],
+  brands: [],
+  categories: [],
   status: 'idle',
   totalItems:0
 };
@@ -16,6 +18,21 @@ export const fetchAllProductsAsync = createAsyncThunk(
     return response.data;
   }
 );
+export const fetchBrandsAsync = createAsyncThunk(
+  'product/fetchBrands',
+    async () => {
+      const response = await fetchBrands();
+      return response.data;
+    }
+)
+export const fetchcategoriesAsync = createAsyncThunk(
+  'product/fetchCategories',
+    async () => {
+      const response = await fetchCategories();
+      console.log(response)
+      return response.data;
+    }
+)
 export const fetchProductsByFiltersAsync = createAsyncThunk(
   'product/fetchProductsByFilters',
   async ({filter,sort,pagination}) => {
@@ -52,13 +69,29 @@ export const productSlice = createSlice({
         state.status = 'idle';
         state.products = action.payload.products;
         state.totalItems = action.payload.totalItems;
-      });
+      })
+      .addCase(fetchBrandsAsync.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(fetchBrandsAsync.fulfilled, (state, action) => {
+        state.status = 'idle';
+        state.brands = action.payload;
+      })
+      .addCase(fetchcategoriesAsync.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(fetchcategoriesAsync.fulfilled, (state, action) => {
+        state.status = 'idle';
+        state.categories = action.payload;
+      })
   },
 });
 
 export const { increment } = productSlice.actions;
 
 export const selectAllProducts = (state) => state.product.products;
+export const selectbrands = (state) => state.product.brands;
+export const selectcategories = (state) => state.product.categories;
 export const selectTotalItems = (state) => state.product.totalItems;
 
 
