@@ -5,6 +5,8 @@ import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import Checkout from './pages/Checkout'
 import ProductDetailPage from './pages/ProductDetailsPage'
+import Protected from './features/auth/components/protected';
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -12,14 +14,23 @@ import {
   Link,
 } from 'react-router-dom';
 
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectLoggedInUser } from './features/auth/authSlice';
+import { fetchItemsByUserIdAsync } from './features/cart/CartSlice';
+
+
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home></Home>,
+    element: (
+    <Protected>
+      <Home></Home>
+    </Protected>),
   },
   {
     path: '/login',
-    element: <LoginPage></LoginPage>,
+    element:<LoginPage></LoginPage>,
   },
   {
     path: '/signup',
@@ -27,19 +38,38 @@ const router = createBrowserRouter([
   },
   { // only for testing - then page will be added
     path: '/cart',
-    element: <CartPage></CartPage>,
+    element: (
+      <Protected>
+        <CartPage></CartPage>
+      </Protected>
+    ),
   },
   { 
     path: '/checkout',
-    element: <Checkout></Checkout>,
+    element: (
+      <Protected>
+        <Checkout></Checkout>
+      </Protected>
+    ),
   },
   { 
-    path: '/product-detail',
-    element: <ProductDetailPage></ProductDetailPage>,
+    path: '/product-detail/:id',
+    element: (
+      <Protected>
+        <ProductDetailPage></ProductDetailPage>
+      </Protected>
+    )
   },
 ]);
 
 function App() {
+  const dispatch = useDispatch();
+  const user = useSelector(selectLoggedInUser);
+  useEffect(()=>{
+    if(user){
+      dispatch(fetchItemsByUserIdAsync(user.id))
+    }
+  },[dispatch,user])
   return (
     <div className="App">
       <RouterProvider router={router} />
