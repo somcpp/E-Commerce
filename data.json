@@ -2446,6 +2446,44 @@
     {
       "id": "9fe7",
       "email": "saubhagya.2428cse151@kiet.edu",
+      "addresses": [
+        {
+          "name": "Saubhagya",
+          "email": "sbhgsharma@gmail.com",
+          "phone": "06371454460",
+          "street": "Noida",
+          "city": "Delhi",
+          "state": "Uttar Pradesh",
+          "pinCode": "201301"
+        },
+        {
+          "name": "som",
+          "email": "sbhgsharma@gmail.com",
+          "phone": "06371454460",
+          "street": "Noida",
+          "city": "Delhi",
+          "state": "Uttar Pradesh",
+          "pinCode": "201301"
+        },
+        {
+          "name": "Saubhagya",
+          "email": "hdsajfhsa@gmail.com",
+          "phone": "06371454460",
+          "street": "Noida",
+          "city": "Delhi",
+          "state": "Uttar Pradesh",
+          "pinCode": "201301"
+        },
+        {
+          "name": "hello",
+          "email": "hello@gmail.com",
+          "phone": "561564856",
+          "street": "Khordha",
+          "city": "Khordha",
+          "state": "Odisha",
+          "pinCode": "752055"
+        }
+      ],
       "password": "Hello@123"
     }
   ],
@@ -2471,25 +2509,346 @@
       "user": 2
     },
     {
-      "id": "8",
-      "title": "Microsoft Surface Laptop 4",
-      "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
-      "price": 1499,
-      "discountPercentage": 10.23,
+      "id": "10",
+      "title": "HP Pavilion 15-DK1056WM",
+      "description": "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
+      "price": 1099,
+      "discountPercentage": 6.18,
       "rating": 4.43,
-      "stock": 68,
-      "brand": "Microsoft Surface",
+      "stock": 89,
+      "brand": "HP Pavilion",
       "category": "laptops",
-      "thumbnail": "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+      "thumbnail": "https://i.dummyjson.com/data/products/10/thumbnail.jpeg",
       "images": [
-        "https://i.dummyjson.com/data/products/8/1.jpg",
-        "https://i.dummyjson.com/data/products/8/2.jpg",
-        "https://i.dummyjson.com/data/products/8/3.jpg",
-        "https://i.dummyjson.com/data/products/8/4.jpg",
-        "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+        "https://i.dummyjson.com/data/products/10/1.jpg",
+        "https://i.dummyjson.com/data/products/10/2.jpg",
+        "https://i.dummyjson.com/data/products/10/3.jpg",
+        "https://i.dummyjson.com/data/products/10/thumbnail.jpeg"
       ],
-      "quantity": 3,
+      "quantity": "5",
       "user": "9fe7"
+    },
+    {
+      "id": "11",
+      "title": "perfume Oil",
+      "description": "Mega Discount, Impression of Acqua Di Gio by GiorgioArmani concentrated attar perfume Oil",
+      "price": 13,
+      "discountPercentage": 8.4,
+      "rating": 4.26,
+      "stock": 65,
+      "brand": "Impression of Acqua Di Gio",
+      "category": "fragrances",
+      "thumbnail": "https://i.dummyjson.com/data/products/11/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/11/1.jpg",
+        "https://i.dummyjson.com/data/products/11/2.jpg",
+        "https://i.dummyjson.com/data/products/11/3.jpg",
+        "https://i.dummyjson.com/data/products/11/thumbnail.jpg"
+      ],
+      "quantity": "3",
+      "user": "9fe7"
+    }
+  ],
+  "orders": [
+    {
+      "id": "f584",
+      "items": [
+        {
+          "id": "10",
+          "title": "HP Pavilion 15-DK1056WM",
+          "description": "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
+          "price": 1099,
+          "discountPercentage": 6.18,
+          "rating": 4.43,
+          "stock": 89,
+          "brand": "HP Pavilion",
+          "category": "laptops",
+          "thumbnail": "https://i.dummyjson.com/data/products/10/thumbnail.jpeg",
+          "images": [
+            "https://i.dummyjson.com/data/products/10/1.jpg",
+            "https://i.dummyjson.com/data/products/10/2.jpg",
+            "https://i.dummyjson.com/data/products/10/3.jpg",
+            "https://i.dummyjson.com/data/products/10/thumbnail.jpeg"
+          ],
+          "quantity": "1",
+          "user": "9fe7"
+        },
+        {
+          "id": "11",
+          "title": "perfume Oil",
+          "description": "Mega Discount, Impression of Acqua Di Gio by GiorgioArmani concentrated attar perfume Oil",
+          "price": 13,
+          "discountPercentage": 8.4,
+          "rating": 4.26,
+          "stock": 65,
+          "brand": "Impression of Acqua Di Gio",
+          "category": "fragrances",
+          "thumbnail": "https://i.dummyjson.com/data/products/11/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/11/1.jpg",
+            "https://i.dummyjson.com/data/products/11/2.jpg",
+            "https://i.dummyjson.com/data/products/11/3.jpg",
+            "https://i.dummyjson.com/data/products/11/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": "9fe7"
+        }
+      ],
+      "totalAmount": 1112,
+      "totalItems": "1[object Object]",
+      "user": {
+        "id": "9fe7",
+        "email": "saubhagya.2428cse151@kiet.edu",
+        "addresses": [
+          {
+            "name": "Saubhagya",
+            "email": "sbhgsharma@gmail.com",
+            "phone": "06371454460",
+            "street": "Noida",
+            "city": "Delhi",
+            "state": "Uttar Pradesh",
+            "pinCode": "201301"
+          },
+          {
+            "name": "som",
+            "email": "sbhgsharma@gmail.com",
+            "phone": "06371454460",
+            "street": "Noida",
+            "city": "Delhi",
+            "state": "Uttar Pradesh",
+            "pinCode": "201301"
+          },
+          {
+            "name": "Saubhagya",
+            "email": "hdsajfhsa@gmail.com",
+            "phone": "06371454460",
+            "street": "Noida",
+            "city": "Delhi",
+            "state": "Uttar Pradesh",
+            "pinCode": "201301"
+          },
+          {
+            "name": "hello",
+            "email": "hello@gmail.com",
+            "phone": "561564856",
+            "street": "Khordha",
+            "city": "Khordha",
+            "state": "Odisha",
+            "pinCode": "752055"
+          }
+        ],
+        "password": "Hello@123"
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "som",
+        "email": "sbhgsharma@gmail.com",
+        "phone": "06371454460",
+        "street": "Noida",
+        "city": "Delhi",
+        "state": "Uttar Pradesh",
+        "pinCode": "201301"
+      }
+    },
+    {
+      "id": "04c1",
+      "items": [
+        {
+          "id": "10",
+          "title": "HP Pavilion 15-DK1056WM",
+          "description": "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
+          "price": 1099,
+          "discountPercentage": 6.18,
+          "rating": 4.43,
+          "stock": 89,
+          "brand": "HP Pavilion",
+          "category": "laptops",
+          "thumbnail": "https://i.dummyjson.com/data/products/10/thumbnail.jpeg",
+          "images": [
+            "https://i.dummyjson.com/data/products/10/1.jpg",
+            "https://i.dummyjson.com/data/products/10/2.jpg",
+            "https://i.dummyjson.com/data/products/10/3.jpg",
+            "https://i.dummyjson.com/data/products/10/thumbnail.jpeg"
+          ],
+          "quantity": "1",
+          "user": "9fe7"
+        },
+        {
+          "id": "11",
+          "title": "perfume Oil",
+          "description": "Mega Discount, Impression of Acqua Di Gio by GiorgioArmani concentrated attar perfume Oil",
+          "price": 13,
+          "discountPercentage": 8.4,
+          "rating": 4.26,
+          "stock": 65,
+          "brand": "Impression of Acqua Di Gio",
+          "category": "fragrances",
+          "thumbnail": "https://i.dummyjson.com/data/products/11/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/11/1.jpg",
+            "https://i.dummyjson.com/data/products/11/2.jpg",
+            "https://i.dummyjson.com/data/products/11/3.jpg",
+            "https://i.dummyjson.com/data/products/11/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": "9fe7"
+        }
+      ],
+      "totalAmount": 1112,
+      "totalItems": "1[object Object]",
+      "user": {
+        "id": "9fe7",
+        "email": "saubhagya.2428cse151@kiet.edu",
+        "addresses": [
+          {
+            "name": "Saubhagya",
+            "email": "sbhgsharma@gmail.com",
+            "phone": "06371454460",
+            "street": "Noida",
+            "city": "Delhi",
+            "state": "Uttar Pradesh",
+            "pinCode": "201301"
+          },
+          {
+            "name": "som",
+            "email": "sbhgsharma@gmail.com",
+            "phone": "06371454460",
+            "street": "Noida",
+            "city": "Delhi",
+            "state": "Uttar Pradesh",
+            "pinCode": "201301"
+          },
+          {
+            "name": "Saubhagya",
+            "email": "hdsajfhsa@gmail.com",
+            "phone": "06371454460",
+            "street": "Noida",
+            "city": "Delhi",
+            "state": "Uttar Pradesh",
+            "pinCode": "201301"
+          },
+          {
+            "name": "hello",
+            "email": "hello@gmail.com",
+            "phone": "561564856",
+            "street": "Khordha",
+            "city": "Khordha",
+            "state": "Odisha",
+            "pinCode": "752055"
+          }
+        ],
+        "password": "Hello@123"
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "hello",
+        "email": "hello@gmail.com",
+        "phone": "561564856",
+        "street": "Khordha",
+        "city": "Khordha",
+        "state": "Odisha",
+        "pinCode": "752055"
+      }
+    },
+    {
+      "id": "5c55",
+      "items": [
+        {
+          "id": "10",
+          "title": "HP Pavilion 15-DK1056WM",
+          "description": "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
+          "price": 1099,
+          "discountPercentage": 6.18,
+          "rating": 4.43,
+          "stock": 89,
+          "brand": "HP Pavilion",
+          "category": "laptops",
+          "thumbnail": "https://i.dummyjson.com/data/products/10/thumbnail.jpeg",
+          "images": [
+            "https://i.dummyjson.com/data/products/10/1.jpg",
+            "https://i.dummyjson.com/data/products/10/2.jpg",
+            "https://i.dummyjson.com/data/products/10/3.jpg",
+            "https://i.dummyjson.com/data/products/10/thumbnail.jpeg"
+          ],
+          "quantity": "5",
+          "user": "9fe7"
+        },
+        {
+          "id": "11",
+          "title": "perfume Oil",
+          "description": "Mega Discount, Impression of Acqua Di Gio by GiorgioArmani concentrated attar perfume Oil",
+          "price": 13,
+          "discountPercentage": 8.4,
+          "rating": 4.26,
+          "stock": 65,
+          "brand": "Impression of Acqua Di Gio",
+          "category": "fragrances",
+          "thumbnail": "https://i.dummyjson.com/data/products/11/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/11/1.jpg",
+            "https://i.dummyjson.com/data/products/11/2.jpg",
+            "https://i.dummyjson.com/data/products/11/3.jpg",
+            "https://i.dummyjson.com/data/products/11/thumbnail.jpg"
+          ],
+          "quantity": "3",
+          "user": "9fe7"
+        }
+      ],
+      "totalAmount": 5534,
+      "totalItems": "3[object Object]",
+      "user": {
+        "id": "9fe7",
+        "email": "saubhagya.2428cse151@kiet.edu",
+        "addresses": [
+          {
+            "name": "Saubhagya",
+            "email": "sbhgsharma@gmail.com",
+            "phone": "06371454460",
+            "street": "Noida",
+            "city": "Delhi",
+            "state": "Uttar Pradesh",
+            "pinCode": "201301"
+          },
+          {
+            "name": "som",
+            "email": "sbhgsharma@gmail.com",
+            "phone": "06371454460",
+            "street": "Noida",
+            "city": "Delhi",
+            "state": "Uttar Pradesh",
+            "pinCode": "201301"
+          },
+          {
+            "name": "Saubhagya",
+            "email": "hdsajfhsa@gmail.com",
+            "phone": "06371454460",
+            "street": "Noida",
+            "city": "Delhi",
+            "state": "Uttar Pradesh",
+            "pinCode": "201301"
+          },
+          {
+            "name": "hello",
+            "email": "hello@gmail.com",
+            "phone": "561564856",
+            "street": "Khordha",
+            "city": "Khordha",
+            "state": "Odisha",
+            "pinCode": "752055"
+          }
+        ],
+        "password": "Hello@123"
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "Saubhagya",
+        "email": "hdsajfhsa@gmail.com",
+        "phone": "06371454460",
+        "street": "Noida",
+        "city": "Delhi",
+        "state": "Uttar Pradesh",
+        "pinCode": "201301"
+      }
     }
   ]
 }
