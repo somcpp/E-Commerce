@@ -6,18 +6,21 @@ import SignupPage from './pages/SignupPage';
 import Checkout from './pages/Checkout'
 import ProductDetailPage from './pages/ProductDetailsPage'
 import Protected from './features/auth/components/protected';
-
 import {
   createBrowserRouter,
   RouterProvider,
   Route,
   Link,
 } from 'react-router-dom';
-
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectLoggedInUser } from './features/auth/authSlice';
 import { fetchItemsByUserIdAsync } from './features/cart/CartSlice';
+import { PageNotFound } from './pages/404';
+import OrderSuccessPage from './pages/OrderSuccessPage';
+import { UserOrdersPage } from './pages/UserOrdersPage';
+import UserProfilePage from './pages/UserProfilePage';
+import { fetchLoggedInUserAsync } from './features/user/userSlice';
 
 
 const router = createBrowserRouter([
@@ -60,6 +63,30 @@ const router = createBrowserRouter([
       </Protected>
     )
   },
+  {
+    path: '/order-success/:id',
+    element: (
+      <OrderSuccessPage></OrderSuccessPage>
+    )
+  },
+  {
+    path: '/orders',
+    element: (
+      <UserOrdersPage></UserOrdersPage>
+    )
+  },
+  {
+    path: '/profile',
+    element: (
+      <UserProfilePage></UserProfilePage>
+    ),
+  },
+  {
+    path: '*',
+    element: (
+      <PageNotFound></PageNotFound>
+    )
+  }
 ]);
 
 function App() {
@@ -68,6 +95,7 @@ function App() {
   useEffect(()=>{
     if(user){
       dispatch(fetchItemsByUserIdAsync(user.id))
+      dispatch(fetchLoggedInUserAsync(user.id))
     }
   },[dispatch,user])
   return (

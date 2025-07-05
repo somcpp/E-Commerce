@@ -2,9 +2,9 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { createOrder } from './counterAPI';
 
 const initialState = {
-  value: 0,
   orders: [],
   status: 'idle',
+  currentOrder: null,
 };
 
 // The function below is called a thunk and allows us to perform async logic. It
@@ -26,8 +26,8 @@ export const orderSlice = createSlice({
   initialState,
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
-    increment: (state) => {
-      state.value += 1;
+    resetOrder: (state) => {
+      state.currentOrder = null;
     },
   },
   extraReducers: (builder) => {
@@ -38,11 +38,12 @@ export const orderSlice = createSlice({
       .addCase(createOrderAsync.fulfilled, (state, action) => {
         state.status = 'idle';
         state.orders.push(action.payload)
+        state.currentOrder = action.payload;
       });
   },
 });
 
-export const { increment } = orderSlice.actions;
-
+export const { resetOrder } = orderSlice.actions;
+export const selectCurrentOrder= (state) => state.order.currentOrder
 
 export default orderSlice.reducer;
