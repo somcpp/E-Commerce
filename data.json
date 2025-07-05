@@ -2448,13 +2448,13 @@
       "email": "saubhagya.2428cse151@kiet.edu",
       "addresses": [
         {
-          "name": "Saubhagya",
+          "name": "hi",
           "email": "sbhgsharma@gmail.com",
-          "phone": "06371454460",
-          "street": "Noida",
           "city": "Delhi",
           "state": "Uttar Pradesh",
-          "pinCode": "201301"
+          "pinCode": "201301",
+          "phone": "06371454460",
+          "street": "Noida"
         },
         {
           "name": "hello",

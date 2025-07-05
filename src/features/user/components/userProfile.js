@@ -17,9 +17,10 @@ export default function UserProfile() {
     setValue,
     formState: { errors },
   } = useForm();
-  console.log(user);
+  // console.log(user);
   const handleEdit = (addressUpdate, index) => {
     const newUser = { ...user, addresses: [...user.addresses] };
+    // console.log("edit: ",newUser)
     newUser.addresses.splice(index, 1, addressUpdate);
     dispatch(updateUserAsync(newUser));
     setSelectedEditIndex(-1);
