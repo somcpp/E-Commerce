@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import { useSelector,useDispatch } from 'react-redux';
 import { selectItems } from '../cart/CartSlice';
 import { selectLoggedInUser } from '../auth/authSlice';
+import { selectUserInfo } from '../user/userSlice';
 
 const navigation = [
   { name: 'Dashboard', link: '#', user: true },
@@ -29,7 +30,7 @@ function classNames(...classes) {
 
 function NavBar({ children }) {
   const items = useSelector(selectItems);
-  const user = useSelector(selectLoggedInUser);
+  const user = useSelector(selectUserInfo);
 
   return (
     <>

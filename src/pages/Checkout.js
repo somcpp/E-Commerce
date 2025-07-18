@@ -16,7 +16,7 @@ function Checkout() {
   const [selectedAddress,setSelectedAddress] = useState(null);
   const [paymentMethod, setPaymentMethod] = useState('cash')
   const handleQuantity = ((e,item)=>{
-    dispatch(updateCartAsync({...item,quantity: e.target.value}))
+    dispatch(updateCartAsync({id:item.id,quantity: e.target.value}))
   })
   const handleRemove = ((e,id) => {
     dispatch(deleteItemFromCartAsync(id));

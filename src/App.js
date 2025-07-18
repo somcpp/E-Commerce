@@ -20,7 +20,7 @@ import { PageNotFound } from './pages/404';
 import OrderSuccessPage from './pages/OrderSuccessPage';
 import { UserOrdersPage } from './pages/UserOrdersPage';
 import UserProfilePage from './pages/UserProfilePage';
-import { fetchLoggedInUserAsync } from './features/user/userSlice';
+import { fetchLoggedInUserAsync, fetchLoggedInUserOrderAsync } from './features/user/userSlice';
 import Logout from './features/auth/components/Logout';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import ProtectedAdmin from './features/auth/components/ProtectedAdmin';
@@ -28,7 +28,7 @@ import AdminHome from './pages/AdminHome';
 ForgotPasswordPage
 import AdminProudctFormPage from './pages/AdminProductFormPage'
 import { AdminOrderPage } from './pages/AdminOrdersPage';
-AdminOrderPage
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -143,6 +143,7 @@ function App() {
     if(user){
       dispatch(fetchItemsByUserIdAsync(user.id))
       dispatch(fetchLoggedInUserAsync(user.id))
+      dispatch(fetchLoggedInUserOrderAsync(user.id))
     }
   },[dispatch,user])
   return (
