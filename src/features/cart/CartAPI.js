@@ -1,4 +1,5 @@
 export function addToCart(item) {
+  console.log(item)
   return new Promise(async (resolve) => {
     const response = await fetch('http://localhost:8080/cart', {
       method: 'POST',
@@ -7,7 +8,14 @@ export function addToCart(item) {
     });
     const data = await response.json();
     // TODO: on server it will only return some info of user (not password)
-    resolve({ data });
+    if(response.ok){
+      resolve({ data });
+    } else{
+      const err = await response.json();
+      console.log(err);
+      reject(err)
+    }
+    
   });
 }
 
