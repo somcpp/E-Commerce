@@ -31,17 +31,21 @@ function Checkout() {
   })
   // console.log(user)
   const handleOrder = (e) => {
-    const order = {
+    if(selectedAddress && paymentMethod){
+      const order = {
       items,
       totalAmount,
       totalItems,
-      user,
+      user:user.id,
       paymentMethod,
       selectedAddress,
       status: 'pending' //order status can be delivered, receive.
+      }
+      console.log(order)
+      dispatch(createOrderAsync(order))
     }
-    console.log(order)
-    dispatch(createOrderAsync(order))
+    
+    
   }
   const {
     register,
