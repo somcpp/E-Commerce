@@ -132,12 +132,12 @@ function AdminOrders() {
                           <div className="mr-2">
                             <img
                               className="w-6 h-6 rounded-full"
-                              src={item.thumbnail}
+                              src={item.product.thumbnail}
                             />
                           </div>
                           <span>
-                            {item.title} - #{item.quantity} - $
-                            {discountedPrice(item)}
+                            {item.product.title} - #{item.quantity} - $
+                            {item.product.price}
                           </span>
                         </div>
                       ))}
@@ -152,11 +152,11 @@ function AdminOrders() {
                         <div>
                           <strong>{order.selectedAddress.name}</strong>,
                         </div>
-                        <div>{order.selectedAddress.street},</div>
-                        <div>{order.selectedAddress.city}, </div>
-                        <div>{order.selectedAddress.state}, </div>
-                        <div>{order.selectedAddress.pinCode}, </div>
-                        <div>{order.selectedAddress.phone}, </div>
+                        <div>{order.selectedAddress[0].street},</div>
+                        <div>{order.selectedAddress[0].city}, </div>
+                        <div>{order.selectedAddress[0].state}, </div>
+                        <div>{order.selectedAddress[0].pinCode}, </div>
+                        <div>{order.selectedAddress[0].phone}, </div>
                       </div>
                     </td>
                     <td className="py-3 px-6 text-center">
