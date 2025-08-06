@@ -35,7 +35,7 @@ export default function Login() {
             noValidate
             onSubmit={handleSubmit((data) => {
               dispatch(
-                checkUserAsync({ email: data.email, password: data.password })
+                checkUserAsync({ username: data.email, password: data.password })
               );
             })}
             className="space-y-6"
